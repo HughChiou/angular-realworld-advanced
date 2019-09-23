@@ -16,4 +16,11 @@ describe('AuthGuardService', () => {
       expect(service).toBeTruthy();
     }
   ));
+
+  it('hasLogin should be false', inject(
+    [AuthGuardService],
+    (service: AuthGuardService) => {
+      expect(service.hasLogin).toBeFalsy();
+    }
+  ));
 });

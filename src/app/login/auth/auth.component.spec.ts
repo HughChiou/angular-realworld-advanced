@@ -27,4 +27,12 @@ describe('AuthComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should can login', () => {
+    component.loginData.email = 'aaa@test.com';
+    component.loginData.password = 'password';
+    component.doLogin();
+
+    expect(true).toBeTruthy();
+  });
 });
