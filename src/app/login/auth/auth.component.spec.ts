@@ -1,10 +1,10 @@
-import { AuthService } from './../../auth.service';
-import { RouterTestingModule } from '@angular/router/testing';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
 
+import { AuthService } from './../../auth.service';
 import { AuthComponent } from './auth.component';
-import { Router } from '@angular/router';
 
 describe('AuthComponent', () => {
   let component: AuthComponent;
@@ -12,9 +12,9 @@ describe('AuthComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ReactiveFormsModule, FormsModule, RouterTestingModule],
+      imports: [FormsModule, RouterTestingModule, HttpClientTestingModule],
       declarations: [AuthComponent],
-      providers: [Router, AuthService]
+      providers: [AuthService]
     }).compileComponents();
   }));
 
