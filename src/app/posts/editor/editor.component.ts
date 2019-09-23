@@ -6,7 +6,7 @@ import {
   FormGroup,
   Validators
 } from '@angular/forms';
-import { PostService } from '../../post.service';
+import { PostService } from '../../services/post.service';
 
 @Component({
   selector: 'app-editor',

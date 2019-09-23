@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterTestingModule } from '@angular/router/testing';
 
-import { AuthService } from './../../auth.service';
+import { AuthService } from '../../services/auth.service';
 import { AuthComponent } from './auth.component';
 
 describe('AuthComponent', () => {
